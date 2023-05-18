@@ -12,6 +12,8 @@ void bubble_sort(int *array, size_t size)
 	size_t pos = 0, sizeMax = size;
 	int aux = 0, change = 0;
 
+	if (array == NULL || size <= 1)
+		return;
 	while (1)
 	{
 		while (pos < sizeMax)
@@ -21,12 +23,12 @@ void bubble_sort(int *array, size_t size)
 				aux = array[pos];
 				array[pos] = array[pos + 1];
 				array[pos + 1] = aux;
-				sizeMax--;
 				print_array(array, size);
 				change = 1;
 			}
 			pos++;
 		}
+		sizeMax--;
 		pos = 0;
 		if (change == 0)
 			break;
