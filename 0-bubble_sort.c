@@ -28,11 +28,16 @@ void bubble_sort(int *array, size_t size)
 	}
 }
 
+/**
+ * swap - swap nodes
+ * @array: pointer to array
+ * @i: iterator
+*/
 void swap(int *array, size_t i)
 {
 	int temp = 0;
 
 	temp = array[i];
 	array[i] = array[i + 1];
-	array [i + 1] = temp;
+	array[i + 1] = temp;
 }
